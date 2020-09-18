@@ -14,6 +14,6 @@ module.exports = {
     includePaths: stylePath,
   },
   env: {
-    
+    BASE_SERVICE_URL: "http://api.mercadopublico.cl/servicios/v1/publico"
   }
 }
