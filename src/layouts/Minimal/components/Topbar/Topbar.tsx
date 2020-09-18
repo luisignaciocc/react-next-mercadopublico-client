@@ -2,6 +2,7 @@ import React from 'react'
 import clsx from 'clsx' 
 import { makeStyles } from '@material-ui/core' 
 import { AppBar, Toolbar } from '@material-ui/core'
+import { Link } from '../../../../components'
 
 const useStyles = makeStyles(_theme => ({
   root: {
@@ -25,17 +26,17 @@ const Topbar = (props:Props) => {
     <AppBar
       {...rest}
       className={clsx(classes.root, className)}
-      color="primary"
+      color="inherit"
       position="static"
     >
       <Toolbar>
-        {/* <Link href="/home"> */}
-          {/* <img
+        <Link href="/">
+            <img
             className={classes.brand}
             alt="Logo"
-            src="/images/logo.svg"
-          /> */}
-        {/* </Link> */}
+            src="/images/logo-chilecompra-original.png"
+          />
+        </Link>
       </Toolbar>
     </AppBar>
   ) 

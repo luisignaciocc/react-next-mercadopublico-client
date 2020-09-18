@@ -14,6 +14,7 @@ module.exports = {
     includePaths: stylePath,
   },
   env: {
-    BASE_SERVICE_URL: "http://api.mercadopublico.cl/servicios/v1/publico"
+    BASE_SERVICE_URL: process.env.BASE_SERVICE_URL,
+    TICKET_MERCADO_PUBLICO: process.env.TICKET_MERCADO_PUBLICO,
   }
 }

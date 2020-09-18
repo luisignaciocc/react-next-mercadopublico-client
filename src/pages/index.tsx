@@ -13,7 +13,7 @@ const Index = () => {
         <Typography variant="h4" component="h1" gutterBottom>
           Next.js with TypeScript example
         </Typography>
-        <Link href="/about" color="secondary">
+        <Link href="/buy-orders" color="secondary">
           Go to the about page
         </Link>
         <ProTip />
