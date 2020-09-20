@@ -9,7 +9,7 @@ import MUIDataTable from "mui-datatables"
 import Loader from 'react-loader-spinner'
 import { MainTheme } from 'src/themes'
 import { BuyOrderModal, Header } from 'src/components/pages/buy-orders'
-import moment, { Moment } from 'moment'
+import moment from 'moment'
 
 const ticket = process.env.TICKET_MERCADO_PUBLICO
 
