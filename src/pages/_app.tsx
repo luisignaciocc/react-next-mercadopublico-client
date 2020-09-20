@@ -6,6 +6,7 @@ import CssBaseline from '@material-ui/core/CssBaseline'
 import { MainTheme } from 'src/themes/main'
 import { MuiPickersUtilsProvider } from '@material-ui/pickers'
 import MomentUtils from '@date-io/moment'
+import "src/styles/index.scss"
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css"
 
 export default function MyApp(props: AppProps) {

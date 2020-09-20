@@ -1,12 +1,10 @@
 const path = require('path')
 
 const stylePath = [
-  // path.join(__dirname, 'src/styles'),
-  // path.join(__dirname, 'node_modules/@sweetalert2/theme-material-ui/'),
-  // path.join(__dirname, 'sweetalert2/src/sweetalert2'),
+  path.join(__dirname, 'src/styles'),
 ];
 
-console.log(stylePath);
+// console.log(stylePath);
 
 
 module.exports = {

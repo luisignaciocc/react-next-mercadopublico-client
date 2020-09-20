@@ -14,9 +14,6 @@ import moment from 'moment'
 const ticket = process.env.TICKET_MERCADO_PUBLICO
 
 const useStyles = makeStyles({
-  table: {
-    width: "100%",
-  },
   loaderContainer: {
     width: "100%",
     height: '85vh',
