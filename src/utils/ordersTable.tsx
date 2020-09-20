@@ -7,7 +7,6 @@ export const tableOptions = {
     rowsPerPageOptions: [10, 15, 25],
     selectableRowsHeader: false,
     selectableRowsHideCheckboxes: true,
-    // setTableProps: () => ({style:  }),
     textLabels: {
         body: {
             noMatch: "No se encontraron coincidencias",
