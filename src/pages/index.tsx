@@ -21,7 +21,7 @@ const Index = () => {
         </Typography>
         <Box style={{ width: "100%", height: "30px" }} />
         <Typography variant="h4" align="center" gutterBottom>
-          Consulta las órdenes de compra del día anterior registradas en la base de datos de 
+          Consulta las órdenes de compra de cualquier fecha registradas en la base de datos de 
         </Typography>
         <Typography variant="h4" align="center" gutterBottom>
           <Link href="https://www.mercadopublico.cl" color="secondary" target="_blank">
