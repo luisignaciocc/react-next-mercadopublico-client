@@ -4,10 +4,10 @@ import Dialog from '@material-ui/core/Dialog'
 import DialogActions from '@material-ui/core/DialogActions'
 import DialogContent from '@material-ui/core/DialogContent'
 import DialogTitle from '@material-ui/core/DialogTitle'
-import { BuyOrdersByCodeModel, BuyOrdersService, Item } from '../../../services'
+import { BuyOrdersByCodeModel, BuyOrdersService, Item } from 'src/services'
 import { Backdrop, Grid, Typography } from '@material-ui/core'
 import Loader from 'react-loader-spinner'
-import { MainTheme } from '../../../themes'
+import { MainTheme } from 'src/themes/main'
 
 interface Props {
     open:boolean

@@ -2,7 +2,7 @@ import React from 'react'
 import clsx from 'clsx' 
 import { makeStyles } from '@material-ui/core' 
 import { AppBar, Toolbar } from '@material-ui/core'
-import { Link } from '../../../../components'
+import { Link } from 'src/components'
 
 const useStyles = makeStyles(_theme => ({
   root: {

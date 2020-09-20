@@ -1,14 +1,15 @@
 import React, { useState, useEffect } from 'react'
 import { Grid } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
-import { withLayout } from '../../hocs'
-import { LAYOUT_TYPE } from '../../utils'
-import { tableOptions, tableColumns } from '../../utils/ordersTable'
-import { BuyOrder, BuyOrdersService } from '../../services'
+import { withLayout } from 'src/hocs'
+import { LAYOUT_TYPE } from 'src/utils'
+import { tableOptions, tableColumns } from 'src/utils/ordersTable'
+import { BuyOrder, BuyOrdersService } from 'src/services'
 import MUIDataTable from "mui-datatables"
 import Loader from 'react-loader-spinner'
-import { MainTheme } from '../../themes'
-import BuyOrderModal from '../../components/pages/buy-orders/BuyOrderModal'
+import { MainTheme } from 'src/themes'
+import { BuyOrderModal, Header } from 'src/components/pages/buy-orders'
+import moment, { Moment } from 'moment'
 
 const ticket = process.env.TICKET_MERCADO_PUBLICO
 
@@ -25,7 +26,7 @@ const useStyles = makeStyles({
   }
 });
 
-const About = () => {
+const BuyOrders = () => {
   
   const classes = useStyles()
 
@@ -34,12 +35,13 @@ const About = () => {
   const [buyOrders, setBuyOrders] = useState<BuyOrder[]>([])
   const [buyOrderCode, setBuyOrderCode] = useState<string|null>(null)
   const [buyOrdersService, setBuyOrdersService] = useState<BuyOrdersService|null>(null)
+  const [date, setDate] = useState(moment().subtract(1, 'days')) as any 
   
   const init = async () => {
     if(ticket) {
       let ordersService = new BuyOrdersService(ticket)
       setBuyOrdersService(ordersService)
-      ordersService.list('02022014').then(data => {
+      ordersService.list(date.format('DDMMYYYY')).then(data => {
         if(data && data.Listado) {
           setBuyOrders(data.Listado)
           setIsLoading(false)
@@ -62,11 +64,17 @@ const About = () => {
     setBuyOrderCode(null)
   }
 
+  const changeDate = (newDate:string) => {
+    setDate(newDate)
+    setIsLoading(true)
+    init()
+  }
+
   return (
     !isLoading ? 
       <Grid container>
         <BuyOrderModal open={openBuyOrderModal} onClose={onCloseBuyOrderModal} buyOrdersService={buyOrdersService} buyOrderCode={buyOrderCode} />
-        {/* <Header action={refresh} /> */}
+        <Header action={changeDate} value={date} />
         <br />
         <MUIDataTable
           title={"Órdenes de Compra"}
@@ -88,4 +96,4 @@ const About = () => {
   )
 }
 
-export default withLayout(About, LAYOUT_TYPE.MINIMAL)
+export default withLayout(BuyOrders, LAYOUT_TYPE.MINIMAL)

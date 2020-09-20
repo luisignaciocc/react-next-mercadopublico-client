@@ -73,7 +73,12 @@ export const tableColumns = (action:(dataIndex:number) => void) => [
                 return (
                     <Button variant="contained" color="secondary" onClick={() => action(dataIndex)}>Ver</Button>
                 )
-            }
+            },
+            filter: false,
+            print: false,
+            searchable: false,
+            sort: false,
+            viewColumns: false
         }
     },
 ]

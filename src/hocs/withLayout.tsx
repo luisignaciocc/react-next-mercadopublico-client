@@ -1,6 +1,6 @@
 import React from 'react'
-import { MinimalLayout, DefaultLayout } from '../layouts'
-import Error from '../pages/_error'
+import { MinimalLayout, DefaultLayout } from 'src/layouts'
+import Error from 'src/pages/_error'
 
 type LayoutType = 'minimal' | 'default'
 
