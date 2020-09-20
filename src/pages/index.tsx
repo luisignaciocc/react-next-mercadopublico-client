@@ -38,7 +38,7 @@ const Index = () => {
         <Box style={{ textAlign: "-webkit-center" as "center" }}>
           <img src="images/regiones-de-chile-13.png" style={{ maxWidth: "100%" }}/>
         </Box>
-        <Box style={{ borderTop: "3px solid #3c5194", position: "relative", marginLeft: "calc(276px - 50vw)", width: "100vw", top: "-25px", zIndex: "-1" as unknow as number }} />
+        <Box style={{ borderTop: "3px solid #3c5194", position: "relative", marginLeft: "calc(276px - 50vw)", width: "100vw", top: "-25px", zIndex: "-1" as any as number }} />
         <Box style={{ width: "100%", height: "100px" }} />
         <Copyright />
       </Box>

@@ -81,7 +81,6 @@ const BuyOrders = () => {
           data={buyOrders}
           columns={tableColumns(viewOrder)}
           options={tableOptions}
-          className={classes.table}
         />
       </Grid>
     :
