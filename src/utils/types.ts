@@ -1,4 +1,4 @@
 export type LayoutType = {
-  MINIMAL: "minimal",
-  DEFAULT: "default"
+	MINIMAL: "minimal"
+	DEFAULT: "default"
 }

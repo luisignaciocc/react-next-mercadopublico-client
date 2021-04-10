@@ -1,18 +1,15 @@
-const path = require('path')
+const path = require("path")
 
-const stylePath = [
-  path.join(__dirname, 'src/styles'),
-];
+const stylePath = [path.join(__dirname, "src/styles")]
 
 // console.log(stylePath);
 
-
 module.exports = {
-  sassOptions: {
-    includePaths: stylePath,
-  },
-  env: {
-    BASE_SERVICE_URL: process.env.BASE_SERVICE_URL,
-    TICKET_MERCADO_PUBLICO: process.env.TICKET_MERCADO_PUBLICO,
-  }
+	sassOptions: {
+		includePaths: stylePath,
+	},
+	env: {
+		BASE_SERVICE_URL: process.env.BASE_SERVICE_URL,
+		TICKET_MERCADO_PUBLICO: process.env.TICKET_MERCADO_PUBLICO,
+	},
 }
