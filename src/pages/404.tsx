@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
 	},
 }))
 
-export default () => {
+const ErrorPage = () => {
 	const classes = useStyles()
 
 	return (
@@ -43,3 +43,5 @@ export default () => {
 		</div>
 	)
 }
+
+export default ErrorPage

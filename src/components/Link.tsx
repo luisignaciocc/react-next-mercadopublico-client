@@ -65,7 +65,8 @@ function Link(props: LinkProps) {
 	const router = useRouter()
 	const pathname = typeof href === "string" ? href : href.pathname
 	const className = clsx(classNameProps, {
-		[activeClassName]: router.pathname === pathname && activeClassName,
+		[activeClassName]:
+			router && router.pathname === pathname && activeClassName,
 	})
 
 	if (naked) {
