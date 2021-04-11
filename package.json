@@ -28,10 +28,12 @@
 		"sass": "^1.26.11"
 	},
 	"scripts": {
+		"preinstall": "yarn global add pm2 cross-env",
 		"dev": "nodemon",
 		"build": "next build && tsc --project tsconfig.server.json",
 		"start": "cross-env NODE_ENV=production node dist/index.js",
-		"test": "jest"
+		"pm2": "pm2 start npm --name 'mercadopublico-client' -- start",
+		"test": "jest --watch"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.0.0",

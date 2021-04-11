@@ -17,4 +17,4 @@ RUN npm install pm2 -g
 # start app
 RUN npm run build
 EXPOSE 3000
-CMD pm2-runtime start npm --name "client" -- start
+CMD pm2-runtime start npm --name "mercadopublico-client" -- start
